@@ -145,7 +145,7 @@ def experiment(pkt_size, vm_id):
     print results
     time.sleep(2)
     cleanup()
-
+    '''
     ## No Congestion, No Respone ##
     print "---------------------------------------"
     results.extend([0])
@@ -188,8 +188,8 @@ def experiment(pkt_size, vm_id):
     res_str = "%.1f\t%.2f\t%.1f\t%.1f\t%.1f\t%.2f\t%.1f\t%d\t%d\t%d\t%d\t%.1f\n" % tuple(results)
     print "DONE"
     return res_str 
-    
-    #return "hi"
+    '''
+    return "hi"
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description = "RX Throughput and RTT Tests")
@@ -198,8 +198,8 @@ if __name__ == "__main__":
     args = parser.parse_args(sys.argv[1:])
  
     f = open(args.out, "w")
-    pkt_sizes = ["64", "128", "256", "512", "1024", "1500", "r"]
-    #pkt_sizes = ["64"]
+    #pkt_sizes = ["64", "128", "256", "512", "1024", "1500", "r"]
+    pkt_sizes = ["64"]
     for p in pkt_sizes:
         print "======================================="
         print "Packet Size", p, ", VM", args.vm

@@ -11,7 +11,8 @@ local timer		= require "timer"
 local TX_QUEUES = 4
 local RX_QUEUES = 1
 
-local ETH_DST = {"52:54:00:4b:9e:17", "52:54:00:9b:ad:dc"} 
+local ETH_DST = {"52:54:00:4b:9e:17", "52:54:00:9b:ad:dc",
+                 "52:54:00:d0:b3:df"} 
 --local ETH_DST	= "52:54:00:4b:9e:17" -- VM1
 --local ETH_DST   = "52:54:00:9b:ad:dc" -- VM2
 
